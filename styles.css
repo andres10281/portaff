@@ -1,8 +1,58 @@
-body {
-    background-color: #121212;
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    padding-top: 70px; 
+body, html {
+    background: transparent !important; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 70px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+section, .card, .content-box {
+    background: transparent !important; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    box-shadow: none;
+}
+
+.container > *:not(.background-image) {
+    background: transparent !important; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 1 !important;
+}
+
+.background-image {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+}
+
+.main-content {
+    position: relative;
+}
+
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
 }
 
 .container {
@@ -22,19 +72,25 @@ body {
     transform: scale(1.1);
 }
 
-.section-title {
-    color: #ff6f61;
+.section-title, body {
+    color: #b0b0b0 !important;
     font-weight: bold;
     margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+    letter-spacing: 1px;
 }
 
-.service-box, .tech-box, .project-box {
-    background-color: #1e1e1e;
+.fa, .bi {
+    color: #b0b0b0 !important;
+    text-shadow: 3px 3px 7px rgba(0,0,0,0.7);
+}
+
+.service-box, .tech-box, .project-box, main, section {
+    background: transparent !important; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 16px;
     margin: 20px 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -53,11 +109,15 @@ body {
 
 .btn-custom {
     background-color: #ff6f61;
-    color: white;
+    color: #f5f5f5;
     border: none;
     padding: 10px 20px;
     margin: 5px;
     border-radius: 5px;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.6);
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -78,7 +138,7 @@ body {
 
 .btn-success {
     background-color: #25d366; 
-    color: white;
+    color: #f5f5f5;
     border-radius: 5px;
     padding: 12px 20px;
     font-size: 18px;
